@@ -6,7 +6,6 @@ public:
         int n=nums.size();
         arr1.push_back(nums[0]);
         arr2.push_back(nums[1]);
-        vector<int>ans;
         for(int i=2;i<n;i++){
             if(arr1.back()>arr2.back()){
                 arr1.push_back(nums[i]);
@@ -15,12 +14,9 @@ public:
                 arr2.push_back(nums[i]);
             }
         }
-        for(auto &it:arr1){
-            ans.push_back(it);
-        }
-        for(auto &it:arr2){
-            ans.push_back(it);
-        }
-        return ans;
+       for(int i=0;i<arr2.size();i++){
+        arr1.push_back(arr2[i]);
+       }
+       return arr1;
     }
 };
