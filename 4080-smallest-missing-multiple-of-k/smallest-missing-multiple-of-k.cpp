@@ -8,7 +8,7 @@ public:
         mx=max(i,mx);
        }
         int ans=0;
-       for(int i=1;i<1000;i++){
+       for(int i=1;i<=mx+1;i++){
         if(st.find(i*k)==st.end()){
                 ans=i*k;
                 break;
