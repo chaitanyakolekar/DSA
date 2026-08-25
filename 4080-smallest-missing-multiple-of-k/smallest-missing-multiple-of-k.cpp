@@ -8,7 +8,6 @@ public:
 
        }
         int ans=k;
-
         while(st.find(ans)!=st.end()){
                 ans += k;
        }
