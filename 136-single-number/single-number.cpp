@@ -2,12 +2,12 @@ class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         map<int,int>mp;
-        for(auto it:nums){
-            mp[it]++;
+        for(int i=0;i<nums.size();i++){
+            mp[nums[i]]++;
         }
-        for(auto it:mp){
-            if(it.second==1){
-               return it.first;
+        for(int i=0;i<nums.size();i++){
+            if(mp[nums[i]]==1){
+               return nums[i];
             }
         }
         return 0;
