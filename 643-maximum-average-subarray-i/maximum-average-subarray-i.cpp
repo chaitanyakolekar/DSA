@@ -7,21 +7,17 @@ public:
         int i=0;
         int j=0;
         int n=nums.size();
-         while (j<n){
-            sum += nums[j];
-            if (j-i+1 > k){
-                sum -= nums[i];
+        
+            while(i<=(n-k) && j<(k+i)){
+            sum+=nums[j];
+            j++;
+            if(j==(k+i)){
+                maxi=max(maxi,sum);
+                sum-=nums[i];
                 i++;
             }
-            if (j-i+1 == k){
-                avg = sum/(j-i+1);
-                maxi = max(maxi, avg);
             }
-            j++;
-
-         }
-
-        
-        return maxi;
+            avg=maxi/k;
+            return avg;
     }
 };
