@@ -12,26 +12,15 @@ int max(int x,int y){
             return num;
         }
 
-        for(int i=num.length()-1;i>=1;i--){
-            int val=num[i]-'0';
-            if(val%2!=0){
-            maxi=max(val,maxi);
-            }
+        for(int i=num.length()-1;i>=0;i--){
+           
         if(((num[i]-'0')%2)!=0){
             return num.substr(0,i+1);
             }
             
         }
         
-        string ans="";
-        if((num[0]-'0')%2!=0){
-            maxi=max(maxi,num[0]-'0');
-        }
-        if(maxi!=0){
-            ans=to_string(maxi);
-        }
-        return ans;
-        
-        
+       
+        return "";
     }
 };
